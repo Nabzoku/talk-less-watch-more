@@ -15,17 +15,13 @@ function checkForText() {
 }
 eyeInputs.forEach((eye) => {
   eye.addEventListener('change', () => {
-    if (eye.checked) {
-      eyes.classList.toggle('switched');
-      mouth.classList.toggle('switched');
-      checkForText();
-    }
+    eyes.classList.toggle('switched');
+    mouth.classList.toggle('switched');
+    checkForText();
   });
 });
-mouthInput.addEventListener('change', () => {
-  if (mouthInput.checked) {
-    mouth.classList.toggle('switched');
-    eyes.classList.toggle('switched');
-    checkForText();
-  }
+mouthInput.addEventListener('change', (e) => {
+  mouth.classList.toggle('switched');
+  eyes.classList.toggle('switched');
+  checkForText();
 });
